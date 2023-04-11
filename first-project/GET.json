@@ -1,0 +1,12 @@
+{
+  "token":"90932837|-31949281500293931|90948257",
+  "cmd":"GET",
+  "dbName":"Amandb",
+  "rel":"Aman-learning",
+  "jsonStr":
+  {
+    "phone":916689
+  }
+}
+
+//just a personal file to get a data from database. Try to change data inside the syntax according to your own need.
