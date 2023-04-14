@@ -1,0 +1,62 @@
+
+       var jpdbBaeURL= "http://api.login2explore.com:5577";
+       var jpdbIRL ="/api/irl";
+       var jpdb ="/api/iml";
+       var dbName = 'SCHOOL-DB';
+       var tableName = 'STUDENT-TABLE';
+       var conneToken ="90932837|-31949279075333792|90948162";
+      
+      $('#Roll no'). focus();  
+        // Function to save student data
+        function saveData() {
+            // Get form data
+            var formData = {
+                RollNo: $('#RollNo').val(),
+                FullName: $('#FullName').val(),
+                Class: $('#Class').val(),
+                BirthDate: $('#BirthDate').val(),
+                Address: $('#Address').val(),
+                EnrollmentDate: $('#EnrollmentDate').val()
+            };
+
+            // Insert data into JPDB
+            jpdb.insert(formData, function (response) {
+                console.log(response);
+                alert('Student data saved successfully!');
+                resetForm();
+            });
+        }
+
+        // Function to update student data
+        function updateData() {
+            // Get form data
+            var formData = {
+                RollNo: $('#RollNo').val(),
+                FullName: $('#FullName').val(),
+                Class: $('#Class').val(),
+                BirthDate: $('#BirthDate').val(),
+                Address: $('#Address').val(),
+                EnrollmentDate: $('#EnrollmentDate').val()
+            };
+
+            // Update data in JPDB
+            jpdb.update(formData, function (response) {
+                console.log(response);
+                alert('Student data updated successfully!');
+                resetForm();
+            });
+        }
+
+        // Function to reset form
+        function resetForm() {
+            isNewRecord = true;
+            $('#RollNo').val('');
+            $('#FullName').val('');
+            $('#Class').val('');
+            $('#BirthDate').val('');
+            $('#Address').val('');
+            $('#EnrollmentDate').val('');
+            $('#saveBtn').prop('disabled', false);
+            $('#updateBtn').prop('disabled', true);
+        }
+    
