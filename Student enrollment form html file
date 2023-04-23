@@ -64,11 +64,7 @@
             if (validateForm()) {
                 var data = {
                     rollNo: rollNoInput.value,
-                    fullName: fullNameInput.value,
-                    class: classInput.value,
-                    birthDate: birthDateInput.value,
-                    address: addressInput.value,
-                    enrollmentDate: enrollmentDateInput.value
+                   
                 }
             }
         }
