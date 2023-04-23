@@ -40,33 +40,18 @@
                 <label for="EnrollmentDate">Enrollment Date:</label>
                 <input type="Date" class="form-control" id="enrollmentDate" name="enrollmentDate" placeholder="Enter Enrollment Date" disabled>
             </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-primary" id="saveBtn" onclick="saveData()">Save</button>
-                <button type="button" class="btn btn-success" id="updateBtn" onclick="updateData()" disabled>Update</button>
-                <button type="button" class="btn btn-danger" id="resetBtn" onclick="resetForm()">Reset</button>
+            <div class="form-group text-centre">
+                <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled> Save</button>
+                <button type="button" class="btn btn-lg btn-primary" id="update" onclick="updateData()" disabled>Change</button>
+                <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetForm()" disabled>Reset</button>
             </div>
         </form>
     </div>
 
-    <script>
-        var isNewRecord = true;
-        var rollNoInput = document.getElementById('RollNo');
-        var fullNameInput = document.getElementById('FullName');
-        var classInput = document.getElementById('Class');
-        var birthDateInput = document.getElementById('BirthDate');
-        var addressInput = document.getElementById('Address');
-        var enrollmentDateInput = document.getElementById('enrollmentDate');
-        var saveBtn = document.getElementById('saveBtn');
-        var updateBtn = document.getElementById('updateBtn');
-        var resetBtn = document.getElementById('resetBtn');
+    <script type="text/javascript" src='http://login2explore.com/jpdb/resources/js/0.0.3/jpd-commons.js'></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    
+</body>
+</html>                   
 
-        function saveData() {
-            if (validateForm()) {
-                var data = {
-                    rollNo: rollNoInput.value,
-                   
-                }
-            }
-        }
-                
                    
